@@ -5,6 +5,8 @@ on:
     branches:
     - main
   pull_request:
+  workflow_call:
+    
 
 jobs:
   run_dune_build:
@@ -28,7 +30,7 @@ jobs:
           opam pin add .
 
           # make sure tests pass
-          dune runtest --display=verbose -j1
+          dune runtest --verbose -j1
 
           # make sure opam package file is valid
           opam lint
