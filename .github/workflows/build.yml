@@ -28,7 +28,7 @@ jobs:
           opam pin add .
 
           # make sure tests pass
-          dune runtest
+          dune runtest. --verbose -j1
 
           # make sure opam package file is valid
           opam lint
