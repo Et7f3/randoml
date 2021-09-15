@@ -30,4 +30,5 @@
 (library
  (name rand)
  (public_name randoml.rand)
+ (flags --clib -pthread)
  (foreign_archives rand))
